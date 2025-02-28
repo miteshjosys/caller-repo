@@ -1,0 +1,27 @@
+# .github/workflows/caller-workflow.yml
+name: Caller Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  trigger-callee-workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Trigger Callee Workflow
+      id: trigger_workflow
+      uses: benc-uk/workflow-dispatch@v1
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        owner: repo1_owner  # Replace with the actual owner of repo1
+        repo: repo1_name     # Replace with the actual name of repo1
+        workflow: callee-workflow.yml
+        ref: main
+        inputs: |
+          message=Greetings from the caller!
