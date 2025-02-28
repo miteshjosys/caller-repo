@@ -7,15 +7,7 @@ on:
       - master
 
 jobs:
-  trigger-callee-workflow:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Trigger Callee Workflow
-      id: trigger_workflow
-      uses: github.com/.github/workflows/callee-workflow.yml@master
-      with:
-        message: Greetings from the caller!
+  call-workflow:
+    uses: github.com/.github/workflows/callee-workflow.yml@master
+    with:
+      message: Greetings from the caller!
