@@ -16,12 +16,6 @@ jobs:
 
     - name: Trigger Callee Workflow
       id: trigger_workflow
-      uses: benc-uk/workflow-dispatch@v1
+      uses: uses: github.com/.github/workflows/callee-workflow.yml@master
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        owner: miteshjosys
-        repo: callee-repo     # Replace with the actual name of repo1
-        workflow: callee-workflow.yml
-        ref: master
-        inputs: |
-          message=Greetings from the caller!
+        message: Greetings from the caller!
