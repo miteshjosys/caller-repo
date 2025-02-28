@@ -23,5 +23,5 @@ jobs:
         repo: repo1_name     # Replace with the actual name of repo1
         workflow: callee-workflow.yml
         ref: main
-        inputs: |
-          message=Greetings from the caller!
+        inputs:
+          message: Greetings from the caller
