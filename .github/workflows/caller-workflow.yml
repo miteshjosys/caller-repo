@@ -16,6 +16,6 @@ jobs:
 
     - name: Trigger Callee Workflow
       id: trigger_workflow
-      uses: uses: github.com/.github/workflows/callee-workflow.yml@master
+      uses: github.com/.github/workflows/callee-workflow.yml@master
       with:
         message: Greetings from the caller!
