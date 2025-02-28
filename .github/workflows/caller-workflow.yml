@@ -8,6 +8,6 @@ on:
 
 jobs:
   call-workflow:
-    uses: github.com/miteshjosys/.github/workflows/callee-workflow.yml@master
+    uses: github.com/miteshjosys/callee-repo/.github/workflows/callee-workflow.yml@master
     with:
       message: Greetings from the caller!
