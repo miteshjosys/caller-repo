@@ -4,7 +4,7 @@ name: Caller Workflow
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   trigger-callee-workflow:
